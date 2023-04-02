@@ -9,16 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
+ 
 <body>
     <h1 style="text-align: center;">Exercise and Yoga Trainer</h1>     
     <nav>
         <ul>
             <li><a href="/">Home</a></li> 
-            <li><a href="/curl">Curl CountPro</a></li>
+            <li><a href="/exercise">Curl CountPro</a></li>
             <li><a href="/yoga">Yoga Pose</a></li> 
-            <li><a href="/tree">Tree Pose</a></li>   
-            <li><a href="/about">About</a></li>
+            <li><a href="/yoga/tree">Tree Pose</a></li>    
+            <li><a href="/about">About</a></li>        
         </ul>
     </nav>
     {% block content %}  

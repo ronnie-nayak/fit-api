@@ -1,7 +1,7 @@
 body {
     background-color: lightgray; 
 }
-
+ 
 nav {
     background-color: #333;
     height: 50px;
@@ -52,3 +52,48 @@ nav {
     }
   }
    
+______
+
+#sub-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sub-nav h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#sub-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sub-nav li {
+  margin-bottom: 5px;
+}
+ 
+#sub-nav a {
+  display: block;
+  padding: 5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#sub-nav a:hover {  
+  background-color: #eee;
+  border-color: #ccc;
+}
+ 

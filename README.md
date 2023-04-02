@@ -18,3 +18,18 @@ The exercise and yoga trainer project aims to provide an innovative and personal
 2. Anshul (backend)
 3. Ishu (frontend) 
 4. Anshika (frontend)
+
+
+For quick and simple addition of new poses and exercises,
+And detection of Errors and Debugging,
+Made the Source Code with Modular Approach.
+Now new exercises and poses can easily added 
+to the single individual python modules.  
+
+         Project
+        /       \
+    Exercise    Yoga
+    / |          |   \
+Curls Pushups  T-pose Tree-poses
+
+
