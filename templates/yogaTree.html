@@ -2,11 +2,21 @@
 
 {% block content %}
 
-<h1 style = "text-align: center;">Tree Pose Detection</h1>  
- <div style="justify-content: center; display: flex; margin-top: 30px;">
-    <img src="{{url_for('treePose_feed')}}">         
+<h1 style = "text-align: center;">Tree Pose Detection</h1>     
+ <div style="justify-content: center; display: flex;  ">                 
+    <!-- <img src="{{url_for('treePose_feed')}}">      -->  
+    <div id="div-1" style="border: 2px solid #fc6d6d; width: 640px; height: 480px; margin: 3rem 3rem 3rem 3rem;">     
+        <!-- <iframe id="video-iframe" style="border:2px solid #fc6d6d;" src="/treePose_feed" width="640" height="480"></iframe>  -->
+    </div>     
+    <div id="div-2"  style="border: 2px solid #fc6d6d; width: 640px; height: 480px; margin: 3rem 3rem 3rem 3rem; " >   
+        <img src="{{url_for('static',filename='images/gifs/ezgif-2-506b0f073f.gif')}}" alt="">       
+    </div>   
 </div>   
-   
+<div id="div-3" style="margin-left: 52rem;">   
+    <button id="b1" onclick="closeVideo()">Close video</button> 
+    <button id="b1" onclick="openVideo()">Open video</button>      
+
+</div>
 {% endblock %} 
  
  <!--...-->  

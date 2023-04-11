@@ -1,31 +1,96 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title> 
+    <meta name="description" content=""> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.8.1/css/all.css"> 
+    <style>
+                /* Dropdown Content (Hidden by Default) */
+                .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                margin-top: 13px;  
+                }
+
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block; 
+                }
+
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {background-color: #ddd;}
+
+                /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+                .show {display:block;}  
+    </style>
 </head>
  
 <body>
-    <h1 style="text-align: center;">Exercise and Yoga Trainer</h1>     
+    <header>
+		<h1 class="title">FitHub</h1>    
+		<p class="tagline">Fit You, Happy You</p>
+        <img style="filter: invert(1);" height="90px" width="100px" class="im" src="{{ url_for('static', filename='images/logo1.png') }}"> 
+	</header>        
+
+
     <nav>
         <ul>
-            <li><a href="/">Home</a></li> 
-            <li><a href="/exercise">Curl CountPro</a></li>
-            <li><a href="/yoga">Yoga Pose</a></li> 
-            <li><a href="/yoga/tree">Tree Pose</a></li>    
-            <li><a href="/about">About</a></li>        
+            <li><a href="/" class="tb"><b>HOME</b></a></li>     
+            <li>  
+                <a href="#" onclick="dropdownExercise()"><b>EXERCISE</b></a>      
+                <div id="myDropdown1" class="dropdown-content">     
+                    <a href="/exercise">Bicep-Curl</a> 
+                    <a href="#">Push-Ups</a>      
+                    <a href="#">Squats</a>  
+                </div>           
+            </li> 
+            <li>
+                <a href="#" onclick="dropdownYoga()"><b>YOGA</b></a>    
+                <div id="myDropdown2" class="dropdown-content"> 
+                    <a href="/yoga">T Pose</a>   
+                    <a href="/yoga/tree">Tree Pose</a>     
+                    <a href="#">Warrior Pose</a> 
+                </div>
+            </li>   
+            <li><a href="/about"><b>ABOUT</b></a></li>        
         </ul>
     </nav>
-    {% block content %}  
- 
-    {% endblock %}
-</body>
+    <script>
+            function dropdownExercise() {        
+            document.getElementById("myDropdown1").classList.toggle("show");
+            } 
+            function dropdownYoga() { 
+            document.getElementById("myDropdown2").classList.toggle("show");
+            } 
+    </script>
+    {% block content %}     
 
+    {% endblock %}   
+</body>
+<script type="text/javascript">
+    function closeVideo() { 
+        var iframe = document.getElementById('video-iframe');
+        iframe.parentNode.removeChild(iframe);  
+    }    
+    function openVideo() {
+        var div = document.getElementById('div-1');
+        div.innerHTML = `        
+        <iframe id="video-iframe" style="border:2px solid #fc6d6d;" src="/bicepCurl_feed" width="640" height="480"></iframe> 
+        `;  
+    }  
+</script>      
 <script src="{{ url_for('static', filename='js/script.js') }}" async defer></script>
 </body>
 

@@ -12,10 +12,10 @@ app = Flask(__name__)
 
 @app.route('/') 
 def index():
-    return render_template('index.html')
+    return render_template('index.html') 
 
 @app.route('/exercise')
-def exercise():   
+def exercise():    
     return render_template('exercise.html') 
  
 @app.route('/yoga')
