@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/release/v5.8.1/css/all.css"> 
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dialog.css') }}">  
+    {% block head %}      
+
+    {% endblock %}       
     <style>
                 /* Dropdown Content (Hidden by Default) */
                 .dropdown-content {
@@ -52,17 +57,17 @@
             <li>  
                 <a href="#" onclick="dropdownExercise()"><b>EXERCISE</b></a>      
                 <div id="myDropdown1" class="dropdown-content">     
-                    <a href="/exercise">Bicep-Curl</a> 
-                    <a href="#">Push-Ups</a>       
-                    <a href="#">Squats</a>  
+                    <a href="/exercise/biceps-curl">Bicep-Curl</a> 
+                    <a href="/exercise/push-ups">Push-Ups</a>       
+                    <a href="/exercise/squats">Squats</a>  
                 </div>           
             </li> 
             <li>
                 <a href="#" onclick="dropdownYoga()"><b>YOGA</b></a>    
                 <div id="myDropdown2" class="dropdown-content"> 
-                    <a href="/yoga">T Pose</a>   
-                    <a href="/yoga/tree">Tree Pose</a>     
-                    <a href="#">Warrior Pose</a> 
+                    <a href="/yoga/t-pose">T Pose</a>       
+                    <a href="/yoga/tree-pose">Tree Pose</a>     
+                    <a href="/yoga/warrior-pose">Warrior Pose</a> 
                 </div>
             </li>   
             <li><a href="/about"><b>ABOUT</b></a></li>        
@@ -76,22 +81,22 @@
             document.getElementById("myDropdown2").classList.toggle("show");
             } 
     </script>
-    {% block content %}     
+    {% block content %}      
 
     {% endblock %}   
-</body>
-<script type="text/javascript">
-    function closeVideo() { 
-        var iframe = document.getElementById('video-iframe');
-        iframe.parentNode.removeChild(iframe);  
-    }    
-    function openVideo() {
-        var div = document.getElementById('div-1');
-        div.innerHTML = `        
-        <iframe id="video-iframe" style="border:2px solid #fc6d6d;" src="/bicepCurl_feed" width="640" height="480"></iframe> 
-        `;  
-    }  
-</script>      
+</body> 
+        <script type="text/javascript">
+            function closeVideo() { 
+                var iframe = document.getElementById('video-iframe');
+                iframe.parentNode.removeChild(iframe);  
+            }    
+            function openVideo(activity) {
+                var div = document.getElementById('div-1'); 
+                div.innerHTML = `         
+                <iframe id="video-iframe" style="border:2px solid #fc6d6d;" src="/${activity}" width="640" height="480"></iframe> 
+                `;  
+            }  
+        </script>      
 <script src="{{ url_for('static', filename='js/script.js') }}" async defer></script>
 </body>
 

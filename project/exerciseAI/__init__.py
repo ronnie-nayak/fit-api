@@ -7,5 +7,5 @@ import numpy as np
 
 from .bicepCurl import * 
 from .pushUps import *  
-from .tricepExtension import * 
+from .squats import * 
 from ..exerciseAI.util import *    

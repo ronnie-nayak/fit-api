@@ -1,4 +1,4 @@
-from . import * 
+from . import *   
 
 def calculate_angle(a,b,c):
     a=np.array(a) 

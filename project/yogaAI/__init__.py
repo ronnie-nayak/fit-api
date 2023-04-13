@@ -5,5 +5,6 @@ import mediapipe as mp
 import numpy as np 
 
 from .tPose import *     
-from .treePose import *    
+from .treePose import *     
+from .warriorPose import *    
 from ..yogaAI.util import *  
