@@ -2,34 +2,28 @@
 The exercise and yoga trainer project aims to provide an innovative and personalized platform to help people improve their physical health. The platform will offer guided workout routines and yoga sessions. The system will use OpenCv and Mediapipe to help predict the correctness of pose and tracking of exercise in real-time. Additionally, In the future, the platform will have a social aspect, allowing users to connect with others, share their progress, and motivate each other towards a healthy lifestyle. The project promises to revolutionize the fitness industry and promote healthy habits among people of all ages and backgrounds. 
 
 # Main Features 
-// to-do
+__Exercise__: *Bicep-Curls, Push-Ups, Tricep-Extensions, Squats.*  
+__Yoga__: *T-Pose, Tree-Pose, Warrior Pose.* 
 
-# Technology Used
-// to-do  
+# Technology Used 
+1. __Flask__: Python based Web-Framework
+2. __OPEN-CV__: Real Time Computer Vision   
+3. WEB: _HTML,CSS,JS_
  
-# Result (w/Demo-Video) 
-// to-do
-
+# Result (Demo-Video)          
+### Link to __Full Video__: [https://link.to.google.drive.video](https://www.google.com)
+<img src="static/images/gifs/demo.gif" data-canonical-src="static/images/gifs/demo.gif" width="460" height="240" /> 
+<!-- ![Demo-GIF](static/images/gifs/demo.gif)         --> 
+ 
 # Web App URL 
-// to-do 
+Link to Website: [http://34.125.230.91/](http://34.125.230.91/) 
 
-# Team Members
+# Team Members 
 1. Pranshu (backend)
-2. Anshul (backend)
-3. Ishu (frontend) 
+2. Anshul (backend)  
+3. Ishu (frontend)    
 4. Anshika (frontend)
 
 
-For quick and simple addition of new poses and exercises,
-And detection of Errors and Debugging,
-Made the Source Code with Modular Approach.
-Now new exercises and poses can easily added 
-to the single individual python modules.  
-
-         Project
-        /       \
-    Exercise    Yoga
-    / |          |   \
-Curls Pushups  T-pose Tree-poses
 
 
