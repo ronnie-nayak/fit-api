@@ -17,10 +17,14 @@ def index():
 @app.route('/exercise/biceps-curl')  
 def exerciseBicepsCurl():      
     return render_template('exerciseBicepsCurl.html')    
- 
+
 @app.route('/exercise/push-ups') 
 def exercisePushUps():       
     return render_template('exercisePushUps.html')       
+
+@app.route('/exercise/triceps')  
+def exerciseTriceps():        
+    return render_template('exerciseTriceps.html')    
 
 @app.route('/exercise/squats')  
 def exerciseSquats():       
@@ -52,7 +56,11 @@ def bicepCurl_feed():
 @app.route('/pushUps_feed')  
 def pushUps_feed(): 
     return Response(exerciseAI.pushUps.gen(), mimetype='multipart/x-mixed-replace; boundary=frame') 
-   
+
+@app.route('/triceps_feed')        
+def triceps_feed(): 
+    return Response(exerciseAI.triceps.gen(), mimetype='multipart/x-mixed-replace; boundary=frame') 
+
 @app.route('/squats_feed')    
 def squats_feed(): 
     return Response(exerciseAI.squats.gen(), mimetype='multipart/x-mixed-replace; boundary=frame') 

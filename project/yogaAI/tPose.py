@@ -7,7 +7,7 @@ def gen():
     mpDraw = mp.solutions.drawing_utils
     # creating our model to detected our pose
     my_pose = mp.solutions.pose
-    pose = my_pose.Pose(min_detection_confidence=0.5,min_tracking_confidence=0.5)
+    pose = my_pose.Pose(min_detection_confidence=0.7,min_tracking_confidence=0.5) 
 
     """Video streaming generator function."""
     label="Unknown Pose"

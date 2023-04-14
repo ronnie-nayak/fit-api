@@ -6,6 +6,7 @@ import numpy as np
 
 
 from .bicepCurl import * 
-from .pushUps import *  
+from .pushUps import *   
+from .triceps import * 
 from .squats import * 
 from ..exerciseAI.util import *    

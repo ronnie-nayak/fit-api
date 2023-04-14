@@ -1,7 +1,7 @@
 from . import *   
 from .util import *    
 
-def gen():  
+def gen():   
     up_pos = None
     down_pos = None
     pushup_pos = None 
