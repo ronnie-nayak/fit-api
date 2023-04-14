@@ -11,17 +11,20 @@ __Yoga__: *T-Pose, Tree-Pose, Warrior Pose.*
 3. WEB: _HTML,CSS,JS_
  
 # Result (Demo-Video)          
-### Link to __Full Video__: [https://link.to.google.drive.video](https://www.google.com)
+### Link to __Full Video__: <a href="https://www.google.com" target="_blank">https://link.to.google.drive.video/</a>    
+<!-- [https://link.to.google.drive.video](https://www.google.com) -->
+
 <img src="static/images/gifs/demo.gif" data-canonical-src="static/images/gifs/demo.gif" width="460" height="240" /> 
 <!-- ![Demo-GIF](static/images/gifs/demo.gif)         --> 
  
 # Web App URL 
-Link to Website: [http://34.125.230.91/](http://34.125.230.91/) 
+### Link to Website: <a href="http://34.125.230.91/" target="_blank">http://34.125.230.91/</a>  
+<!-- [http://34.125.230.91/](http://34.125.230.91/)    -->   
 
-# Team Members 
+# Team Members  
 1. Pranshu (backend)
 2. Anshul (backend)  
-3. Ishu (frontend)    
+3. Ishu (frontend)      
 4. Anshika (frontend)
 
 
