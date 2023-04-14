@@ -1,6 +1,6 @@
 import time
 import cv2 
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response 
 import mediapipe as mp
 import numpy as np
  
@@ -10,11 +10,11 @@ from project import exerciseAI, yogaAI
 
 app = Flask(__name__) 
 
-@app.route('/') 
+@app.route('/')   
 def index():
     return render_template('index.html') 
 
-@app.route('/exercise/biceps-curl')
+@app.route('/exercise/biceps-curl')  
 def exerciseBicepsCurl():      
     return render_template('exerciseBicepsCurl.html')    
  
