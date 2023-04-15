@@ -1,12 +1,41 @@
-{% extends 'base.html' %}{% block content %}
-<script>
-    function changeFunction() {
-      var img = document.querySelector('img');
-      img.src = "{{ url_for('tree') }}";
-      console.log("change fired")
-    }
-  </script>
-<h1 style = "text-align: center;">Curl CountPro</h1>
-<div style="justify-content: center; display: flex; margin-top: 30px;"><img src="{{ url_for('yoga') }}"></div>
-<button style="background-color : Red" onClick="changeFunction()"> Change</button>
-{% endblock %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align: center;"></h1>
+  <br>
+  <br>
+<div class="wrapper">
+    <div class="static-txt">I'm a</div>
+    <ul class="dynamic-txt">
+      <li><span>Yoga Guru</span></li>
+      <li><span>Exercise Monitor</span></li>
+      <li><span>Fitness Trainer</span></li>
+      <li><span>A complete all-in-one Health and Fitness App...
+      </span></li>
+      
+    </ul>
+</div> 
+<footer id ="hp" class="bg-light text-center text-lg-start fixed-bottom">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <p id="hb">Reach us at:</p>  
+        <div id="hn" class="d-flex justify-content-center"> 
+          <a href="#"> 
+            <img src="{{url_for('static',filename='images/insta.jpeg')}}" alt="Instagram" class="img-fluid mx-3" width="40px" height="40px">
+          </a> 
+          <a href="#"> 
+            <img src="{{url_for('static',filename='images/twit.jpeg')}}" alt="Facebook" class="img-fluid mx-3" width="40px" height="40px">
+          </a> 
+          <a href="#">
+            <img src="{{url_for('static',filename='images/git.jpeg')}}" alt="Twitter" class="img-fluid mx-3" width="40px" height="40px">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+ 
+  {% endblock %}

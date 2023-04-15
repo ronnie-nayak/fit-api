@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}      
+
+{% endblock %}  
+
+
+{% block content %} 
+   
+
+<div class="popup-overlay">    
+  <div class="popup">       
+    <div class="pophead">          
+      <h2><b>INSTRUCTIONS:</b></h2>
+    </div>   
+    <p style="margin-top:40px; text-align: left; font-size: large; margin-left: 40px;"> 
+      1.	Take one foot back about 3-4 feet and turn it out at a 45-degree angle.<br><br>  
+      2.	Bend your front knee while keeping your back leg straight and strong.<br><br>  
+      3.	Extend your arms out to the sides, parallel to the ground, with your palms facing down.<br><br>  
+      4.	Turn your head to gaze over your front hand, while keeping your shoulders relaxed and away from your ears.<br><br>  
+      5.	Hold the pose for several breaths, then repeat on the other side.
+      <br><br>  
+    </p>         
+    <button class="pop-btn1" id="popup-button1"><b>OK</b></button>  
+    <button  class="pop-btn2" id="popup-button2"><b>CLOSE</b></button>    
+  </div>       
+</div> 
+      
+<!--  -->
+ 
+<h1 style="text-align: center;"><b>WARRIOR-POSE</b></h1>       
+<div style="justify-content: center; display: flex; margin-top: -30px;">           
+    <div id="div-1" class="div-1">        
+        <!-- code --> 
+    </div>              
+    <div id="div-2" class="div-2">                 
+        <img class="camera-0" width="570px" height="380px" src="{{url_for('static',filename='images/gifs/ezgif-2-353f5f7b42.png')}}" alt="">  
+    </div>  
+</div>  
+
+  <div class="center" id="div-3" style="margin-left: 20rem;">
+    <div class="btn btn2">
+      <div class="inner"></div>    
+      <button id="b1" onclick="openVideo('warriorPose_feed')"><b>START</b> </button>     
+    </div> 
+  <div class="btn btn1">
+    <div class="inner"></div>  
+    <button id="b1" onclick="closeVideo()"><b>FINISH</b></button>
+  </div> 
+</div>
+
+
+{% endblock %}

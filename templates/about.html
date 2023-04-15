@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block content %}  
+<br>
+<h3 id="myp" align="center">Welcome to our AI-based yoga trainer website, where technology meets mindfulness to help you achieve your fitness goals.</h3>
+<br>
+<hr id="f">
+<br><br>
+<div class="card-container">
+    <div class="card">
+        <img src="{{url_for('static',filename='images/aboutpic1.jpeg')}}" alt="Instagram">
+      <div class="card-text">
+        <h2>Yoga Guru</h2>
+        <p>Our app utilizes cutting-edge computer vision technology to recognize and classify various yoga poses, making it easy for you to follow along with our guided routines. Whether you are a beginner or an experienced yogi, our app will provide you with personalized feedback and guidance to help you improve your practice.
+
+            One of the key features of our app is its ability to correct your poses in real-time. By analyzing your movements and comparing them to ideal form, our AI algorithm can identify areas where you need to adjust your position to achieve proper alignment. This helps you avoid common mistakes that can lead to injury and ensures that you get the most benefit from each pose.</p>
+      </div>
+    </div>
+    
+    
+    <div class="card">
+        <img src="{{url_for('static',filename='images/aboutpic2.jpeg')}}" alt="Instagram">
+      <div class="card-text">
+        <h2>Exercise Trainer</h2>
+        <p>Our app counts the number of times you complete each exercise, so you can easily track your progress over time. Whether you're aiming to do more reps, lift heavier weights, or simply maintain your current fitness level, our repetition tracking feature makes it easy to monitor your progress and stay motivated. Proper form is essential for getting the most out of your workouts and avoiding injuries. That's why our app provides real-time feedback on your form as you exercise. Our advanced AI technology analyzes your movements and corrects your form if you're doing an exercise incorrectly. 
+          With our form correction feature, you can be confident that you're getting the most out of every workout and reducing your risk of injury.</p>
+      </div>
+    </div> 
+  </div>
+  
+    <footer class="ll">
+        <p>Created with ❤️ by Pranshu, Anshul, Ishu, and Anshika...</p>
+     
+      
+      </footer> 
+ 
+{% endblock %}  

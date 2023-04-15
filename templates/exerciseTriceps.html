@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}      
+
+{% endblock %}  
+
+
+{% block content %} 
+   
+
+<div class="popup-overlay">    
+  <div class="popup">       
+    <div class="pophead">          
+      <h2><b>INSTRUCTIONS:</b></h2>
+    </div>   
+    <p style="margin-top:40px; text-align: left; font-size: large; margin-left: 40px;"> 
+      1. Stand with feet shoulder-width apart and palms facing forward holding a dumbbell. <br><br>
+      2. Keeping elbows close to the body, slowly raise one dumbbell towards the shoulder while keeping the wrist straight.<br><br>
+      3. Pause and contract the bicep at the top of the movement, then lower the dumbbell back down to the starting position.<br><br>
+      4. Repeat the movement with the other arm and continue alternating for desired reps.<br><br>  
+      5. Breathe naturally and avoid swinging the arms or using momentum to lift the weight.<br><br>
+      6. Start with lighter weights and gradually increase as strength improves.<br><br>  
+    </p>         
+    <button class="pop-btn1" id="popup-button1"><b>OK</b></button>    
+    <button  class="pop-btn2" id="popup-button2"><b>CLOSE</b></button>     
+  </div>       
+</div> 
+   
+<!--  -->
+ 
+<h1 style="text-align: center;"><b>TRICEPS EXTENSIONS</b></h1>     
+<div style="justify-content: center; display: flex; margin-top: -30px;"> 
+    <div id="div-1" class="div-1">        
+        <!-- code --> 
+    </div>              
+    <div id="div-2" class="div-2">               
+        <img class="camera-0" width="640px" height="460px" src="{{url_for('static',filename='images/gifs/tricep.gif')}}" alt="">       
+    </div>  
+</div>    
+
+  <div class="center" id="div-3" style="margin-left: 20rem;">
+    <div class="btn btn2">       
+      <div class="inner"></div>      
+      <button id="b1" onclick="openVideo('triceps_feed')"><b>START</b> </button>
+    </div> 
+  <div class="btn btn1">
+    <div class="inner"></div>  
+    <button id="b1" onclick="closeVideo()"><b>FINISH</b></button>
+  </div> 
+</div>
+
+
+{% endblock %}
