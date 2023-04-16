@@ -68,27 +68,27 @@ def gen():
     # # Check if it is the warrior II pose.
     # #----------------------------------------------------------------------------------------------------------------
 
-    #         # Check if one leg is straight.
-                    if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:
+    #         # Check if one leg is straight.     
+                    if left_knee_angle > 155 and left_knee_angle < 205 or right_knee_angle > 155 and right_knee_angle < 205:
 
                 # Check if the other leg is bended at the required angle.
                         if left_knee_angle > 90 and left_knee_angle < 120 or right_knee_angle > 90 and right_knee_angle < 120:
 
                     # Specify the label of the pose that is Warrior II pose.
-                            label = 'Warrior II Pose'
+                            label = 'Warrior Pose - RIGHT'
                         else:
-                            label = "Bend Keen arms straight"
+                            label = "Unknown Pose"     
+            else: 
+                label = 'Unknown Pose' 
+ 
 
-
-
-            mp_draw.draw_landmarks(frames, result.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-            cv2.putText(frames, label, (15, 12), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 1, cv2.LINE_AA)
-            frame = cv2.imencode('.jpg',frames)[1].tobytes()
-            yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-            key = cv2.waitKey(20)
-            if key == 27:
+            mp_draw.draw_landmarks(frames, result.pose_landmarks, mp_pose.POSE_CONNECTIONS) 
+        cv2.putText(frames, str(label), (40, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+        frame = cv2.imencode('.jpg',frames)[1].tobytes()
+        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        key = cv2.waitKey(20)
+        if key == 27: 
                 break
         # cv2.imshow('Feed',cv2.cvtColor(image,cv2.COLOR_RGB2BGR))
         # if cv2.waitKey(10) & 0xFF == ord('q'):
-        #     break
+        #     break  

@@ -46,11 +46,11 @@
 <body>
     <header>
 		<!-- <h1 class="title">FitHub</h1>     --> 
-        <img width="255px" height="90px" src="{{url_for('static',filename='images/newlogo.png')}}" alt="">  
+        <a href="/" ><img width="255px" height="90px" src="{{url_for('static',filename='images/newlogo.png')}}" alt=""></a>
 		<p class="tagline">Fit You, Happy You</p>
         <img style="filter: invert(1);" height="90px" width="100px" class="im" src="{{ url_for('static', filename='images/logo1.png') }}"> 
 	</header>        
-
+ 
 
     <nav>
         <ul>
@@ -65,7 +65,7 @@
                 </div>           
             </li> 
             <li>
-                <a href="#" onclick="dropdownYoga()"><b>YOGA</b></a>    
+                <a href="#" onclick="dropdownYoga()"><b>YOGA</b></a>           
                 <div id="myDropdown2" class="dropdown-content"> 
                     <a href="/yoga/t-pose">T Pose</a>       
                     <a href="/yoga/tree-pose">Tree Pose</a>     

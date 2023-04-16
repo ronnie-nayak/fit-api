@@ -38,9 +38,11 @@ def gen():
                 if left_knee_angle > 315 and left_knee_angle < 335 or right_knee_angle > 25 and right_knee_angle < 45:
 
             # Specify the label of the pose that is tree pose.
-                     label = 'Tree Pose'
+                     label = 'Tree Pose - RIGHT'
                 else:
                     label = 'Unknown Pose'
+            else:
+                label = 'Unknown Pose'   
             # cv2.putText(img, str(Left_elbowAngle), 
             #                tuple(np.multiply(Left_elbow, [640, 480]).astype(int)), 
             #                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA
@@ -52,17 +54,17 @@ def gen():
             mpDraw.draw_landmarks(img, result.pose_landmarks, my_pose.POSE_CONNECTIONS)
 
         # checking video frame rate
-        # current_time = time.time()
+        # current_time = time.time()  
         # fps = 1 / (current_time - previous_time)
         # previous_time = current_time
 
         # Writing FrameRate on video
-        cv2.putText(img, str( label), (60, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+        cv2.putText(img, str( label), (40, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
         #cv2.imshow("Pose detection", img)
         frame = cv2.imencode('.jpg', img)[1].tobytes()
         yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-        key = cv2.waitKey(20)
+        key = cv2.waitKey(20) 
         if key == 27:
             break
 #  if left_knee_angle > 165 and left_knee_angle < 195 or right_knee_angle > 165 and right_knee_angle < 195:

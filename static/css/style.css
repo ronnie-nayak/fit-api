@@ -102,9 +102,9 @@ header {
 
 .wrapper {
   display: inline-flex;
-  margin-left: 450px;
-  margin-top: 100px;
-}
+  margin-left: 650px;
+  margin-top: 100px;  
+}   
 
 .wrapper .static-txt {
   font-size: 30px;
@@ -116,11 +116,11 @@ header {
 
 .wrapper .dynamic-txt {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-left: 10px;
+  margin-left: 13px; 
   padding-left: 0px;
-  margin-top: 3px;
-  height: 33px;
-  line-height: 32px;
+  margin-top: 2px; 
+  height: 33px;   
+  line-height: 30px;
   font-size: 30px;
   overflow: hidden;
 }
@@ -399,9 +399,27 @@ nav a.active {
   font-size: 18px;
 }
 
+ 
 
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #333;
+}
 
-/*  */
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.footer-icons a {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+    
 
 /*  */

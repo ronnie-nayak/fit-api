@@ -44,7 +44,7 @@ def gen():
                 up_pos = 'Up'
                 display_pos = 'Up'
 
-            if left_arm_angle < 110 and up_pos == 'Up':
+            if left_arm_angle < 110 and up_pos == 'Up':    
                 down_pos = 'Down'
                 display_pos = 'Down'    
 
@@ -58,10 +58,10 @@ def gen():
                 down_pos = None
                 pushup_pos = None  
             mp_draw.draw_landmarks(frames, result.pose_landmarks,mp_pose.POSE_CONNECTIONS)
-            cv2.putText(frames, str(push_up_counter), (15,12), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 1, cv2.LINE_AA)
-            frame = cv2.imencode('.jpg', frames)[1].tobytes()
-            yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-            key = cv2.waitKey(20)
-            if key == 27:
-                break
+        cv2.putText(frames, str(int(push_up_counter)), (15,70), 
+                cv2.FONT_HERSHEY_SIMPLEX, 2, (0,0,0), 3, cv2.LINE_AA) 
+        frame = cv2.imencode('.jpg', frames)[1].tobytes()
+        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        key = cv2.waitKey(20)
+        if key == 27:  
+            break  
