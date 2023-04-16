@@ -4,38 +4,30 @@
 
 <h2 style="text-align: center;"></h1>
   <br>
-  <br>
+  <br> 
 <div class="wrapper">
-    <div class="static-txt">I'm a</div>
-    <ul class="dynamic-txt">
-      <li><span>Yoga Guru</span></li>
+    <div class="static-txt" >I'm a</div>
+    <ul class="dynamic-txt" > 
+      <li><span>Yoga Guru</span></li> 
       <li><span>Exercise Monitor</span></li>
-      <li><span>Fitness Trainer</span></li>
-      <li><span>A complete all-in-one Health and Fitness App...
+      <li><span>Fitness Trainer</span></li>   
+      <li><span>A complete Health and Fitness App... 
       </span></li>
       
     </ul>
-</div> 
-<footer id ="hp" class="bg-light text-center text-lg-start fixed-bottom">
-  <div class="container p-4">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <p id="hb">Reach us at:</p>  
-        <div id="hn" class="d-flex justify-content-center"> 
-          <a href="#"> 
-            <img src="{{url_for('static',filename='images/insta.jpeg')}}" alt="Instagram" class="img-fluid mx-3" width="40px" height="40px">
-          </a> 
-          <a href="#"> 
-            <img src="{{url_for('static',filename='images/twit.jpeg')}}" alt="Facebook" class="img-fluid mx-3" width="40px" height="40px">
-          </a> 
-          <a href="#">
-            <img src="{{url_for('static',filename='images/git.jpeg')}}" alt="Twitter" class="img-fluid mx-3" width="40px" height="40px">
-          </a>
-        </div>
-      </div>
-    </div>
+</div>  
+<footer>
+  <div class="footer-icons">
+    <a href="https://github.com/Pranshu1sati/FitHub" target="_blank">     
+      <img src="{{url_for('static',filename='images/github.png')}}" alt="Twitter" class="img-fluid mx-3" width="40px" height="40px">
+    </a> 
+    <a href="#">
+      <img src="{{url_for('static',filename='images/insta.png')}}" alt="Instagram" class="img-fluid mx-3" width="38px" height="38px">
+    </a>
+    <a href="#"> 
+      <img src="{{url_for('static',filename='images/twitter.png')}}" alt="Facebook" class="img-fluid mx-3" width="44px" height="44dpx">
+    </a>
   </div>
 </footer>
-
- 
-  {% endblock %}
+   
+{% endblock %} 
