@@ -22,8 +22,11 @@ body {
 }
 .ll{
   font-size:20px;
-  position: absolute;
-  margin-left: 36%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5rem;
+  margin-bottom: 0;
   bottom: 0;
 }
 header {
@@ -141,7 +144,7 @@ header {
 
 @keyframes slide {
   100% {
-    top: -128px;
+    top: -126px;
   }
 }
 
@@ -361,7 +364,7 @@ nav a.active {
 
 .card {
   width: 650px;
-  height: 550px;
+  height: max-content;
   background-color: #ffe6c6;
   margin-left: 150px;
   margin-right: 150px;
