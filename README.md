@@ -3,12 +3,11 @@ The exercise and yoga trainer project aims to provide an innovative and personal
  
  
 # DEMO VIDEO   
-### Link to __Full Video__: [https://link.to.google.drive.video](https://www.google.com)
+### Link to Full Video: [https://link.to.google.drive.video](https://www.google.com)
  
-
-# Web App deployed on __Google AMD Instance__ 
-### Link to __Web App__: [http://34.125.230.91/](http://34.125.230.91/)          
-__We have used Google AMD Instances to deploy our project.__  
+# Web App deployed on Google AMD Instance 
+### Link to Web App: [http://34.125.230.91/](http://34.125.230.91/)          
+We have used __Google AMD Instances__ to deploy our project.
 
 
 # Main Features 
@@ -17,14 +16,14 @@ __We have used Google AMD Instances to deploy our project.__
 
 
 # Technology Used 
-1. __Flask__: Python based Web-Framework 
-2. __OPEN-CV__: Real Time Computer Vision   
-3. __MEDIAPIPE__ : building real-time ML applications 
+1. __Flask__: _Python based Web-Framework_
+2. __OPEN-CV__:_Real Time Computer Vision_ 
+3. __MEDIAPIPE__ : _building real-time ML applications_
 3. WEB: _HTML,CSS,JS_ 
 
 
 # Team Members  
-1. __[Pranshu]__(https://github.com/Pranshu1sati/FitHub) (backend)          
+1. [Pranshu](https://github.com/Pranshu1sati/FitHub) (backend)          
 2. [Anshul](https://github.com/alwaysanshul/FitHub) (backend)          
 3. [Ishu](https://github.com/ishuvermaa/FitHub-1) (frontend)      
 4. Anshika (frontend)
