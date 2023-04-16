@@ -39,23 +39,23 @@ def gen():
             right_shoulder_angle = calculate_angle(Right_hip,
                                           Right_shoulder,
                                           Right_elbow)
-            if Left_elbowAngle > 165 and Left_elbowAngle < 195 and Right_elbowAngle > 165 and Right_elbowAngle < 195:
+            if Left_elbowAngle > 155 and Left_elbowAngle < 205 and Right_elbowAngle > 155 and Right_elbowAngle < 205: 
       
                 if left_shoulder_angle > 80 and left_shoulder_angle < 110 and right_shoulder_angle > 80 and right_shoulder_angle < 110:
-                        label = "T pose"
+                        label = "T pose - RIGHT"  
 
                 else:
-                    label='straiten your arms & shoulders'
+                    label='Unknown Pose - WRONG'   
             else:
-                label = 'extend your arms in opp //n direction'
-            cv2.putText(img, str(Left_elbowAngle), 
-                           tuple(np.multiply(Left_elbow, [640, 480]).astype(int)),  
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA
-                                )
-            cv2.putText(img, str(Right_elbowAngle), 
-                           tuple(np.multiply(Right_elbow, [640, 480]).astype(int)), 
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA
-                                )
+                label = '' 
+            # cv2.putText(img, str(Left_elbowAngle), 
+            #                tuple(np.multiply(Left_elbow, [640, 480]).astype(int)),  
+            #                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA
+            #                     )
+            # cv2.putText(img, str(Right_elbowAngle),  
+            #                tuple(np.multiply(Right_elbow, [640, 480]).astype(int)), 
+            #                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA
+            #                     )
             mpDraw.draw_landmarks(img, result.pose_landmarks, my_pose.POSE_CONNECTIONS)
 
         # checking video frame rate
@@ -64,7 +64,7 @@ def gen():
         # previous_time = current_time
 
         # Writing FrameRate on video
-        cv2.putText(img, str( label), (60, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+        cv2.putText(img, str(label), (40, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
         #cv2.imshow("Pose detection", img)
         frame = cv2.imencode('.jpg', img)[1].tobytes()
