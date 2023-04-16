@@ -6,7 +6,7 @@ The exercise and yoga trainer project aims to provide an innovative and personal
 ### Link to Full Video: [https://link.to.google.drive.video](https://www.google.com)
  
 # Web App deployed on Google AMD Instance 
-### Link to Web App: [http://34.125.230.91/](http://34.125.230.91/)          
+### Link to Web App: [https://34.125.36.9/](https://34.125.36.9/)            
 We have used __Google AMD Instances__ to deploy our project.
 
 
