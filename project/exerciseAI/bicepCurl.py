@@ -56,7 +56,7 @@ def gen():
         if(counter==0):
             cv2.putText(img, str(int(counter)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
         elif(counter != 0 and  counter%20)==0:
-            cv2.putText(img, str("Good Job"), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+            cv2.putText(img, str("Good Job"), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255), 3)      
         else:
             cv2.putText(img, str(int(counter)), (70, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
         

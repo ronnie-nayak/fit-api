@@ -40,7 +40,9 @@ def gen():
             # Specify the label of the pose that is tree pose.
                      label = 'Tree Pose - RIGHT'
                 else:
-                    label = 'Unknown Pose - WRONG'
+                    label = 'Unknown Pose'
+            else:
+                label = 'Unknown Pose'   
             # cv2.putText(img, str(Left_elbowAngle), 
             #                tuple(np.multiply(Left_elbow, [640, 480]).astype(int)), 
             #                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 180, 255), 2, cv2.LINE_AA

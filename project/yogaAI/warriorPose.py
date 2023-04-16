@@ -77,17 +77,18 @@ def gen():
                     # Specify the label of the pose that is Warrior II pose.
                             label = 'Warrior Pose - RIGHT'
                         else:
-                            label = "Unknown Pose - WRONG"     
-
-
+                            label = "Unknown Pose"     
+            else: 
+                label = 'Unknown Pose' 
+ 
 
             mp_draw.draw_landmarks(frames, result.pose_landmarks, mp_pose.POSE_CONNECTIONS) 
-            cv2.putText(frames, str(label), (40, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
-            frame = cv2.imencode('.jpg',frames)[1].tobytes()
-            yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-            key = cv2.waitKey(20)
-            if key == 27:
+        cv2.putText(frames, str(label), (40, 50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
+        frame = cv2.imencode('.jpg',frames)[1].tobytes()
+        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+        key = cv2.waitKey(20)
+        if key == 27: 
                 break
         # cv2.imshow('Feed',cv2.cvtColor(image,cv2.COLOR_RGB2BGR))
         # if cv2.waitKey(10) & 0xFF == ord('q'):
-        #     break
+        #     break  
