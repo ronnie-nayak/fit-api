@@ -44,17 +44,10 @@
 </head>
   
 <body>
-    <header>
-		<!-- <h1 class="title">FitHub</h1>     --> 
-        <a href="/" ><img width="255px" height="90px" src="{{url_for('static',filename='images/newlogo.png')}}" alt=""></a>
-		<p class="tagline">Fit You, Happy You</p>
-        <img style="filter: invert(1);" height="90px" width="100px" class="im" src="{{ url_for('static', filename='images/logo1.png') }}"> 
-	</header>        
  
 
     <nav>
         <ul>
-            <li><a href="/" class="tb"><b>HOME</b></a></li>     
             <li>  
                 <a href="#" onclick="dropdownExercise()"><b>EXERCISE</b></a>      
                 <div id="myDropdown1" class="dropdown-content">     
@@ -72,8 +65,6 @@
                     <a href="/yoga/warrior-pose">Warrior Pose</a> 
                 </div>
             </li>
-            <li><a href ='/bmi'><b>BMI CALCULATOR</b></a></li>   
-            <li><a href="/about"><b>ABOUT</b></a></li>        
         </ul>
     </nav>
     <script>
