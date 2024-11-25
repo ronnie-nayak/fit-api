@@ -6,26 +6,24 @@
 body {
   background-color: #454545;
   color: #cdc7c4;
-
 }
-#myp{
-  
+#myp {
   margin-top: 10px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
   margin-bottom: auto;
 }
 
-#f{
+#f {
   border: 2px solid red;
-  
 }
-.ll{
-  font-size:20px;
+.ll {
+  font-size: 20px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top:5rem;
+  margin-top: 5rem;
   margin-bottom: 0;
   bottom: 0;
 }
@@ -41,22 +39,22 @@ header {
 /*  */
 
 .div-1 {
-  border: 2px solid #fc6d6d; 
+  border: 2px solid #7f56d9;
   width: 640px;
   height: 480px;
   margin: 3rem 3rem 3rem 3rem;
-} 
+}
 
 .div-2 {
-  border: 2px solid #fc6d6d;
+  border: 2px solid #7f56d9;
   width: 640px;
   height: 480px;
   margin: 3rem 3rem 3rem 3rem;
   background-color: #ffe6c6;
 }
 
-.camera-0 { 
-  margin-top: 3.5rem; 
+.camera-0 {
+  margin-top: 3.5rem;
 }
 
 /*  */
@@ -74,7 +72,6 @@ header {
 #hn {
   justify-content: space-between;
   display: inline-flex;
- 
 }
 
 #div-3 {
@@ -106,36 +103,38 @@ header {
 .wrapper {
   display: inline-flex;
   margin-left: 650px;
-  margin-top: 100px;  
-}   
+  margin-top: 100px;
+}
 
 .wrapper .static-txt {
   font-size: 30px;
   margin-left: 50px;
   font-weight: 600;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #ffe6c6;
 }
 
 .wrapper .dynamic-txt {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-left: 13px; 
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 13px;
   padding-left: 0px;
-  margin-top: 2px; 
-  height: 33px;   
+  margin-top: 2px;
+  height: 33px;
   line-height: 30px;
   font-size: 30px;
   overflow: hidden;
 }
 
 .dynamic-txt li {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   list-style: none;
-
 
   font-weight: 400;
 
-  color: #ff6000;
+  color: #5f2ad4;
 
   position: relative;
   top: 0;
@@ -151,7 +150,6 @@ header {
 .dynamic-txt li span {
   position: relative;
   height: 40px;
-
 }
 
 .dynamic-txt li span::after {
@@ -161,13 +159,12 @@ header {
   width: 100%;
   left: 0;
   background: #454545;
-  /* border-left: 2px solid #fc6d6d; */
-  animation: typing 3s steps(10) infinite;
 
+  /* border-left: 2px solid #7f56d9; */
+  animation: typing 3s steps(10) infinite;
 }
 
 @keyframes typing {
-
   40%,
   60% {
     left: calc(100% + 30px);
@@ -179,16 +176,16 @@ header {
 }
 
 p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 nav {
-  background-color: #ffa559;
+  background-color: #9170db;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 nav ul {
@@ -202,7 +199,18 @@ nav li {
   place-items: center;
   margin: 0 30px;
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 nav a {
@@ -216,11 +224,10 @@ nav a {
 
 nav a:hover {
   background-color: #ffe6c6;
-
 }
 
 nav a.active {
-  background-color: #f44336;
+  background-color: #5f2ad4;
 }
 
 @media screen and (max-width: 768px) {
@@ -236,7 +243,6 @@ nav a.active {
     margin: 10px 0;
   }
 }
-
 
 #sub-nav {
   position: fixed;
@@ -282,7 +288,7 @@ nav a.active {
 }
 
 /* buttons*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
 
 /* *{
   margin: 0;
@@ -304,7 +310,7 @@ nav a.active {
   border-radius: 5px;
   margin: 17px 20px;
   overflow: hidden;
-  transition: all .4s;
+  transition: all 0.4s;
   /* visibility: hidden; */
 }
 
@@ -314,7 +320,7 @@ nav a.active {
   height: 100%;
   left: -100%;
   z-index: -1;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .btn button {
@@ -328,7 +334,7 @@ nav a.active {
   cursor: pointer;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn:hover {
@@ -340,21 +346,43 @@ nav a.active {
 }
 
 .btn1 .inner {
-  background: -webkit-linear-gradient(right, #43cea2, #185a9d, #43cea2, #185a9d);
-
+  background: -webkit-linear-gradient(
+    right,
+    #43cea2,
+    #185a9d,
+    #43cea2,
+    #185a9d
+  );
 }
 
 .btn2 .inner {
-  background: -webkit-linear-gradient(right, #dad7d7, #de7946, #c9c4c4, #d16e3c);
+  background: -webkit-linear-gradient(
+    right,
+    #dad7d7,
+    #de7946,
+    #c9c4c4,
+    #d16e3c
+  );
 }
 
 .btn3 .inner {
-  background: -webkit-linear-gradient(right, #f1c40e, #26a65b, #f1c40e, #26a65b);
-
+  background: -webkit-linear-gradient(
+    right,
+    #f1c40e,
+    #26a65b,
+    #f1c40e,
+    #26a65b
+  );
 }
 
 .btn4 .inner {
-  background: -webkit-linear-gradient(right, #43cea2, #185a9d, #43cea2, #185a9d);
+  background: -webkit-linear-gradient(
+    right,
+    #43cea2,
+    #185a9d,
+    #43cea2,
+    #185a9d
+  );
 }
 
 .card-container {
@@ -368,7 +396,7 @@ nav a.active {
   background-color: #ffe6c6;
   margin-left: 150px;
   margin-right: 150px;
- 
+
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   overflow: hidden;
@@ -380,14 +408,12 @@ nav a.active {
 }
 
 .card img {
- 
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
 .card-text {
-  
   padding: 20px;
 }
 
@@ -401,8 +427,6 @@ nav a.active {
   color: black;
   font-size: 18px;
 }
-
- 
 
 /* Footer */
 footer {
@@ -423,6 +447,6 @@ footer {
   color: #fff;
   font-size: 20px;
 }
-    
 
 /*  */
+

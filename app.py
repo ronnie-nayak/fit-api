@@ -1,14 +1,23 @@
 import time
 import cv2
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, jsonify
 import mediapipe as mp
 import numpy as np
+from flask_cors import CORS, cross_origin
 
 from project import exerciseAI, yogaAI
 
 # -----------------Routing----------------------------------
 
 app = Flask(__name__)
+CORS(app, support_credentials=True)
+
+
+@app.route("/login")
+@cross_origin(supports_credentials=True)
+def login():
+    return jsonify({"success": "ok"})
+
 
 # @app.route('/')
 # def index():
@@ -16,49 +25,48 @@ app = Flask(__name__)
 
 
 # @app.route('/exercise/biceps-curl')
-@app.route("/")
-def exerciseBicepsCurl():
-    return render_template("exerciseBicepsCurl.html")
-
-
-@app.route("/exercise/push-ups")
-def exercisePushUps():
-    return render_template("exercisePushUps.html")
-
-
-@app.route("/exercise/triceps")
-def exerciseTriceps():
-    return render_template("exerciseTriceps.html")
-
-
-@app.route("/exercise/squats")
-def exerciseSquats():
-    return render_template("exerciseSquats.html")
-
-
-@app.route("/yoga/t-pose")
-def yogaT():
-    return render_template("yogaT.html")
-
-
-@app.route("/yoga/tree-pose")
-def yogaTree():
-    return render_template("yogaTree.html")
-
-
-@app.route("/yoga/warrior-pose")
-def yogaWarrior():
-    return render_template("yogaWarrior.html")
-
-
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
-
-@app.route("/bmi")
-def bmi():
-    return render_template("bmi.html")
+# def exerciseBicepsCurl():
+#     return render_template("exerciseBicepsCurl.html")
+#
+#
+# @app.route("/exercise/push-ups")
+# def exercisePushUps():
+#     return render_template("exercisePushUps.html")
+#
+#
+# @app.route("/exercise/triceps")
+# def exerciseTriceps():
+#     return render_template("exerciseTriceps.html")
+#
+#
+# @app.route("/exercise/squats")
+# def exerciseSquats():
+#     return render_template("exerciseSquats.html")
+#
+#
+# @app.route("/yoga/t-pose")
+# def yogaT():
+#     return render_template("yogaT.html")
+#
+#
+# @app.route("/yoga/tree-pose")
+# def yogaTree():
+#     return render_template("yogaTree.html")
+#
+#
+# @app.route("/yoga/warrior-pose")
+# def yogaWarrior():
+#     return render_template("yogaWarrior.html")
+#
+#
+# @app.route("/about")
+# def about():
+#     return render_template("about.html")
+#
+#
+# @app.route("/bmi")
+# def bmi():
+#     return render_template("bmi.html")
 
 
 # -----------------Video-Feeds---------------------------------
@@ -115,5 +123,4 @@ def warriorPose_feed():
 
 # --------------------------------------------------------------
 if __name__ == "__main__":
-    app.run(debug=True)
-
+    app.run(debug=True, port=5000, host="0.0.0.0")
